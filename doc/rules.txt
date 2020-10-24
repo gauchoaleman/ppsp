@@ -1,0 +1,2 @@
+* session_start is at PageFunctions
+* Time zone settings are at /var/laravel/ppsp/app/Http/Controllers/Controller.php

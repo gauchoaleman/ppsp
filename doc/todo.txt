@@ -1,0 +1,2 @@
+* Falta agregar PageFunctions en /var/laravel/ppsp/composer.json
+* 
