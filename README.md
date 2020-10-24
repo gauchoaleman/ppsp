@@ -1,2 +1,2 @@
 # ppsp
-Plataforma preveción suicidio provincia
+Plataforma prevención suicidio provincia
