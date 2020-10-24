@@ -9,10 +9,6 @@ use Illuminate\Support\Facades\Validator;
 
 class AddItem extends Controller
 {
-  private function one_level1_position_up_from($position)
-  {
-    DB::table('menu_level1_items')->where('position','>=',$position)->increment('position');
-  }
   /**
    * Handle the incoming request.
    *
@@ -43,10 +39,10 @@ class AddItem extends Controller
 
       DB::table('menu_level1_items')->insert($insert_array);
 
-      return $this->show_page("config/home",true,"config","Item agregado.");
+      return $this->show_page("config/menu/level1/list_items",true,"config","Item agregado.");
     }
 
-    return $this->show_page("config/menu/level1/add_item/form",true,"config");
+    return $this->show_page("config/menu/level1/add_item",true,"config");
   }
 
 }

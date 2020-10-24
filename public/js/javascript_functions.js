@@ -1,33 +1,9 @@
-function confirm_del_category(id) {
-  if (confirm("¿Está seguro que quiere borrar la categoría? ¡Todos sus documentos se borrarán!")) {
-    window.open("/categories/admin/del_category?id="+id,"_self");
-  }
-}
-
-function confirm_del_user(id) {
-  if (confirm("¿Está seguro que quiere borrar el usuario?")) {
-    window.open("/auth/admin/del_user?id="+id,"_self");
-  }
-}
-
-function confirm_del_event(id) {
-  if (confirm("¿Está seguro que quiere borrar el evento?")) {
-    window.open("/calendar/admin/del_event?id="+id,"_self");
-  }
-}
-
-function confirm_del_document(id) {
-  if (confirm("¿Está seguro que quiere borrar el documento?")) {
-    window.open("/documents/admin/del_document?id="+id,"_self");
+function confirm_del_level1_item(id) {
+  if (confirm("¿Está seguro que quiere borrar el item?")) {
+    window.open("/config/menu/level1/del_item/"+id,"_self");
   }
 }
 
 function go_back() {
   window.history.back();
-}
-
-function newWindow(url) {
-	popupWindow = window.open(
-		url,
-		'popUpWindow','height=300,width=450,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
 }
