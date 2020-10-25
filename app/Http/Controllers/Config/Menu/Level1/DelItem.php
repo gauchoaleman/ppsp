@@ -15,10 +15,10 @@ class DelItem extends Controller
    * @return \Illuminate\Http\Response
    */
   public function __invoke(Request $request,$id)
-  {    
+  {
     $position = $this->get_level1_position_from_id($id);
     DB::table('menu_level1_items')->where('id', '=', $id)->delete();
-    $this->one_level1_position_down_from($position);
+    one_level1_position_down_from($position);
     return $this->show_page("config/menu/level1/list_items",true,"config","Item borrado.");
   }
 }

@@ -37,20 +37,6 @@ class Controller extends BaseController
     return $ret;
   }
 
-  public function one_level1_position_down_from($position)
-  {
-    DB::table('menu_level1_items')->where('position','>=',$position)->decrement('position');
-  }
 
-  public function one_level1_position_up_from($position)
-  {
-    DB::table('menu_level1_items')->where('position','>=',$position)->increment('position');
-  }
-
-  public function get_level1_position_from_id($id)
-  {
-    $item = DB::table('menu_level1_items')->where('id','=', $id)->first();
-    return $item->position;
-  }
 }
 ?>

@@ -48,9 +48,4 @@ function swap(&$x, &$y) {
   $y=$tmp;
 }
 
-function get_level1_menu_items()
-{
-  return DB::table('menu_level1_items')->select('*')->orderBy('position', 'asc')->get();
-}
-
 ?>

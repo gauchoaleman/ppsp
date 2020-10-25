@@ -31,7 +31,7 @@ class AddItem extends Controller
       if ($v->fails())
           return redirect()->back()->withErrors($v->errors());
       extract($_POST);
-      $this->one_level1_position_up_from($position);
+      one_level1_position_up_from($position);
       $insert_array["position"] = $position;
       $insert_array["menu_text"] = $menu_text;
       $insert_array["text"] = $text;

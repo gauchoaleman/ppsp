@@ -6,11 +6,17 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Classes\\Config\\Config' => $baseDir . '/app/Classes/Config/Config.php',
+    'App\\Classes\\Config\\Menu\\Level1\\Level1' => $baseDir . '/app/Classes/Config/Menu/Level1/Level1.php',
+    'App\\Classes\\Config\\Menu\\Menu' => $baseDir . '/app/Classes/Config/Menu/Menu.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Config\\Login' => $baseDir . '/app/Http/Controllers/Config/Login.php',
     'App\\Http\\Controllers\\Config\\Logout' => $baseDir . '/app/Http/Controllers/Config/Logout.php',
-    'App\\Http\\Controllers\\Config\\Menu\\Level1\\Add' => $baseDir . '/app/Http/Controllers/Config/Menu/Level1/AddItem.php',
+    'App\\Http\\Controllers\\Config\\Menu\\Level1\\AddItem' => $baseDir . '/app/Http/Controllers/Config/Menu/Level1/AddItem.php',
+    'App\\Http\\Controllers\\Config\\Menu\\Level1\\DelItem' => $baseDir . '/app/Http/Controllers/Config/Menu/Level1/DelItem.php',
+    'App\\Http\\Controllers\\Config\\Menu\\Level1\\ListItems' => $baseDir . '/app/Http/Controllers/Config/Menu/Level1/ListItems.php',
+    'App\\Http\\Controllers\\Config\\Menu\\Level1\\ModItem' => $baseDir . '/app/Http/Controllers/Config/Menu/Level1/ModItem.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\ShowPage' => $baseDir . '/app/Http/Controllers/ShowPage.php',
     'App\\Http\\Controllers\\ShowRoot' => $baseDir . '/app/Http/Controllers/ShowRoot.php',

@@ -21,4 +21,4 @@ Route::get('/config/home', 'App\Http\Controllers\ShowPage');
 Route::any('/config/menu/level1/add_item', 'App\Http\Controllers\Config\Menu\Level1\AddItem');
 Route::any('/config/menu/level1/list_items', 'App\Http\Controllers\Config\Menu\Level1\ListItems');
 Route::any('/config/menu/level1/del_item/{id}', 'App\Http\Controllers\Config\Menu\Level1\DelItem');
-
+Route::any('/config/menu/level1/mod_item/{id}', 'App\Http\Controllers\Config\Menu\Level1\ModItem');
