@@ -3,7 +3,6 @@ use App\Classes\Config\Menu\Level1\Level1;
 $level1 = new Level1;
 $items = $level1->get_level1_menu_items();
 ?>
-
 <table class="table table-striped">
   <thead>
     <tr>

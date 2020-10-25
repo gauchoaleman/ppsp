@@ -1,7 +1,8 @@
 <?php
-$items = get_level1_menu_items();
+use App\Classes\Config\Menu\Level1\Level1;
+$level1 = new Level1;
+$items = $level1->get_level1_menu_items();
 ?>
-
 <table class="table table-striped">
   <thead>
     <tr>
@@ -24,9 +25,6 @@ $items = get_level1_menu_items();
   </thead>
   <tbody>
     @foreach($items as $item)
-      @if ($loop->last)
-        <?php $last_item = $item; ?>
-      @endif
       <tr>
         <td>
           <div align="center">
@@ -47,22 +45,5 @@ $items = get_level1_menu_items();
         </td>
       </tr>
     @endforeach
-    <tr>
-      <td>
-        <div align="center">
-          <input type="radio" id="position" name="position" value="{{$last_item->position+1}}">
-        </div>
-      </td>
-      <td>
-        <div align="center">
-          {{$last_item->position+1}}
-        </div>
-      </td>
-      <td>
-        <div align="center">
-          -
-        </div>
-      </td>
-    </tr>
   </tbody>
 </table>

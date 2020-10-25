@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Config\Menu\Level1;
-
+use App\Classes\Config\Menu\Level1\Level1;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
@@ -31,7 +31,8 @@ class AddItem extends Controller
       if ($v->fails())
           return redirect()->back()->withErrors($v->errors());
       extract($_POST);
-      one_level1_position_up_from($position);
+      $level1 = new Level1;
+      $level1->one_level1_position_up_from($position);
       $insert_array["position"] = $position;
       $insert_array["menu_text"] = $menu_text;
       $insert_array["text"] = $text;

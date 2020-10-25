@@ -11,14 +11,20 @@ class Level1 extends Menu
     return DB::table('menu_level1_items')->select('*')->orderBy('position', 'asc')->get();
   }
 
-  public function one_level1_position_down_from($position)
+  public function one_level1_position_down_from($from_position,$to_position="")
   {
-    DB::table('menu_level1_items')->where('position','>=',$position)->decrement('position');
+    if( !$to_position )
+      DB::table('menu_level1_items')->where('position','>=',$from_position)->decrement('position');
+    else
+      DB::table('menu_level1_items')->where('position', '>=', $from_position)->where('position', '<=', $to_position)->decrement('position');
   }
 
-  public function one_level1_position_up_from($position)
+  public function one_level1_position_up_from($from_position,$to_position="")
   {
-    DB::table('menu_level1_items')->where('position','>=',$position)->increment('position');
+    if( !$to_position )
+      DB::table('menu_level1_items')->where('position','>=',$from_position)->increment('position');
+    else
+      DB::table('menu_level1_items')->where('position', '>=', $from_position)->where('position', '<=', $to_position)->increment('position');
   }
 
   public function get_level1_position_from_id($id)
@@ -29,7 +35,7 @@ class Level1 extends Menu
 
   public function get_level1_item_data($id)
   {
-    $item = DB::table('menu_level1_items')->where('id','=', $id)->first();
+    $item = (array) DB::table('menu_level1_items')->where('id', $id)->first();
     return $item;
   }
 }
