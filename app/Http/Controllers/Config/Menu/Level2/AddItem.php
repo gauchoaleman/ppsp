@@ -1,7 +1,7 @@
 <?php
+namespace App\Http\Controllers\Config\Menu\Level2;
+use App\Classes\Config\Menu\Level2\Level2;
 
-namespace App\Http\Controllers\Config\Menu\Level1;
-use App\Classes\Config\Menu\Level1\Level1;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
@@ -11,7 +11,7 @@ class AddItem extends Controller
 {
   private function form_complete()
   {
-    if( isset($_POST["menu_text"]) && isset($_POST["position"]) )
+    if( isset($_POST["menu_text"]) && isset($_POST["menu_level1_item_id"]) && isset($_POST["position"]) )
       return TRUE;
     else
       return FALSE;
@@ -25,12 +25,15 @@ class AddItem extends Controller
   public function __invoke(Request $request)
   {
     if( $this->form_complete() ){
+      //echo "Flag1";      //Flag
       $messages = [
         'menu_text.required' => 'Debe ingresar un texto para el item.',
-        'position.required' => 'Debe ingresar una posición.',
+        'menu_level1_item_id.required' => 'Debe ingresar una posición de nivel 1.',
+        'position.required' => 'Debe ingresar una posición de nivel 2.',
       ];
       $v = Validator::make($request->all(), [
         'menu_text' => 'required',
+        'menu_level1_item_id' => 'required',
         'position' => 'required'],
         $messages
       );
@@ -38,19 +41,22 @@ class AddItem extends Controller
       if ($v->fails())
           return redirect()->back()->withErrors($v->errors());
       extract($_POST);
-      $level1 = new Level1;
-      $level1->one_position_up($position);
+      $level2 = new Level2;
+      $level2->one_position_up($menu_level1_item_id,$position);
+      $insert_array["menu_level1_item_id"] = $menu_level1_item_id;
       $insert_array["position"] = $position;
       $insert_array["menu_text"] = $menu_text;
       $insert_array["text"] = $text;
       $insert_array["created_at"] = date('Y-m-d H:i:s');
 
-      DB::table('menu_level1_items')->insert($insert_array);
+      DB::table('menu_level2_items')->insert($insert_array);
 
-      return $this->show_page("config/menu/level1/list_items",true,"config","Item agregado.");
+      return $this->show_page("config/menu/level2/list_items",true,"config","Item agregado.");
     }
-    else
-      return $this->show_page("config/menu/level1/add_item",true,"config");
+    else{
+      //echo "Flag2";      //Flag
+      //print_r($_POST);      //Flag
+      return $this->show_page("config/menu/level2/add_item",true,"config");//
+    }
   }
-
 }

@@ -1,7 +1,7 @@
 <?php
 use App\Classes\Config\Menu\Level1\Level1;
 $level1 = new Level1;
-$items = $level1->get_level1_menu_items();
+$level1_items = $level1->get_menu_items();
 ?>
 <table class="table table-striped">
   <thead>
@@ -24,7 +24,7 @@ $items = $level1->get_level1_menu_items();
     </tr>
   </thead>
   <tbody>
-    @if( !sizeof($items) )
+    @if( !sizeof($level1_items) )
       <tr>
         <td>
           <div align="center">
@@ -43,38 +43,38 @@ $items = $level1->get_level1_menu_items();
         </td>
       </tr>
     @endif
-    @foreach($items as $item)
+    @foreach($level1_items as $level1_item)
       @if ($loop->last)
-        <?php $last_item = $item; ?>
+        <?php $last_level1_item = $level1_item; ?>
       @endif
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="position" name="position" value="{{$item->position}}">
+            <input type="radio" id="position" name="position" value="{{$level1_item->position}}">
           </div>
         </td>
         <td>
           <div align="center">
-            {{$item->position}}
+            {{$level1_item->position}}
           </div>
         </td>
         <td>
           <div align="center">
-            {{$item->menu_text}}
+            {{$level1_item->menu_text}}
           </div>
         </td>
       </tr>
     @endforeach
-    @if( sizeof($items) )
+    @if( sizeof($level1_items) )
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="position" name="position" value="{{$last_item->position+1}}">
+            <input type="radio" id="position" name="position" value="{{$last_level1_item->position+1}}">
           </div>
         </td>
         <td>
           <div align="center">
-            {{$last_item->position+1}}
+            {{$last_level1_item->position+1}}
           </div>
         </td>
         <td>

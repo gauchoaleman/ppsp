@@ -1,15 +1,17 @@
 <?php
 $menu_text = get_form_value("menu_text");
 $text = get_form_value("text");
+$menu_level1_item_id = get_form_value("menu_level1_item_id");
+$position = get_form_value("position");
 ?>
 <div class="container">
   <br>
   <div class="card" style="width: 50rem;">
     <div class="card-header">
-      Agregar item en nivel 1
+      Agregar item en nivel 2
     </div>
     <div class="card-body">
-      <form method="POST">
+      <form method="POST" id="level1_add_form">
         @csrf
         <div class="form-group row">
           <label class="col-md-4 col-form-label text-md-right">
@@ -39,16 +41,30 @@ $text = get_form_value("text");
           </div>
 
           <label class="col-md-4 col-form-label text-md-right">
-            {{ __('Posición:') }}
+            {{ __('Posición en nivel 1:') }}
           </label>
           <div class="col-md-6">
-            @include('config.menu.level1.add_item.form.level1_position_selector')
-            @error('position')
+            @include('config.menu.level2.add_item.form.level1_position_selector')
+            @error('menu_level1_item_id')
               <div class="alert alert-danger">
                 {{ $message }}
               </div>
             @enderror
           </div>
+
+          @if( $menu_level1_item_id )
+            <label class="col-md-4 col-form-label text-md-right">
+              {{ __('Posición en nivel 2:') }}
+            </label>
+            <div class="col-md-6">
+              @include('config.menu.level2.add_item.form.level2_position_selector')
+              @error('level2_position')
+                <div class="alert alert-danger">
+                  {{ $message }}
+                </div>
+              @enderror
+            </div>
+          @endif
 
           <div class="col-md-6">
             <button type="submit" class="btn btn-primary">

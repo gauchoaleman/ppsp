@@ -33,7 +33,8 @@ function aasort (&$array, $key) {
 
 function get_form_value($var_name)
 {
-  return request()->get($var_name)?request()->get($var_name):request()->old($var_name);
+  return isset($_POST[$var_name])?$_POST[$var_name]:"";
+  //return request()->get($var_name)?request()->get($var_name):request()->old($var_name);
 }
 
 function get_form_sub_array_value($var_name,$index,$sub_index)

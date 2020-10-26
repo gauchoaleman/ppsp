@@ -523,6 +523,7 @@ class ComposerStaticInitea182070a1b66285566904e032ff010c
     public static $classMap = array (
         'App\\Classes\\Config\\Config' => __DIR__ . '/../..' . '/app/Classes/Config/Config.php',
         'App\\Classes\\Config\\Menu\\Level1\\Level1' => __DIR__ . '/../..' . '/app/Classes/Config/Menu/Level1/Level1.php',
+        'App\\Classes\\Config\\Menu\\Level2\\Level2' => __DIR__ . '/../..' . '/app/Classes/Config/Menu/Level2/Level2.php',
         'App\\Classes\\Config\\Menu\\Menu' => __DIR__ . '/../..' . '/app/Classes/Config/Menu/Menu.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -532,6 +533,7 @@ class ComposerStaticInitea182070a1b66285566904e032ff010c
         'App\\Http\\Controllers\\Config\\Menu\\Level1\\DelItem' => __DIR__ . '/../..' . '/app/Http/Controllers/Config/Menu/Level1/DelItem.php',
         'App\\Http\\Controllers\\Config\\Menu\\Level1\\ListItems' => __DIR__ . '/../..' . '/app/Http/Controllers/Config/Menu/Level1/ListItems.php',
         'App\\Http\\Controllers\\Config\\Menu\\Level1\\ModItem' => __DIR__ . '/../..' . '/app/Http/Controllers/Config/Menu/Level1/ModItem.php',
+        'App\\Http\\Controllers\\Config\\Menu\\Level2\\AddItem' => __DIR__ . '/../..' . '/app/Http/Controllers/Config/Menu/Level2/AddItem.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\ShowPage' => __DIR__ . '/../..' . '/app/Http/Controllers/ShowPage.php',
         'App\\Http\\Controllers\\ShowRoot' => __DIR__ . '/../..' . '/app/Http/Controllers/ShowRoot.php',

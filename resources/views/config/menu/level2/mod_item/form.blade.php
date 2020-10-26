@@ -1,7 +1,3 @@
-<?php
-$menu_text = get_form_value("menu_text");
-$text = get_form_value("text");
-?>
 <div class="container">
   <br>
   <div class="card" style="width: 50rem;">
@@ -42,7 +38,7 @@ $text = get_form_value("text");
             {{ __('Posición:') }}
           </label>
           <div class="col-md-6">
-            @include('config.menu.level1.add_item.form.level1_position_selector')
+            @include('config.menu.level1.mod_item.form.level1_position_selector')
             @error('position')
               <div class="alert alert-danger">
                 {{ $message }}
