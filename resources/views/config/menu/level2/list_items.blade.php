@@ -1,1 +1,1 @@
-@include('config.menu.level1.list_items.list')
+@include('config.menu.level2.list_items.list')

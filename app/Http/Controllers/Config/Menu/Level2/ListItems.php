@@ -1,6 +1,5 @@
 <?php
-
-namespace App\Http\Controllers\Config\Menu\Level1;
+namespace App\Http\Controllers\Config\Menu\Level2;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -15,7 +14,7 @@ class ListItems extends Controller
    */
   public function __invoke(Request $request)
   {
-    return $this->show_page("config/menu/level1/list_items",true,"config");
+    return $this->show_page("config/menu/level2/list_items",true,"config");
   }
 }
 ?>

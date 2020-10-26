@@ -24,6 +24,14 @@
         </a>
       </li>
       &nbsp;&nbsp;
+      <li class="dropdown">
+        <a href="/config/menu/level2/list_items">
+          <span class="nav-label">
+            Nivel 2
+          </span>
+        </a>
+      </li>
+      &nbsp;&nbsp;
     </ul>
   </div>
 </nav>

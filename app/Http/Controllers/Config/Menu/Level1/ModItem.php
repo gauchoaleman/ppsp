@@ -52,7 +52,7 @@ class ModItem extends Controller
       $data = $_POST;
     else
       $data = (array) $level1->get_item_data($id);
-      print_r($data);
+      //print_r($data);
     return $this->show_page("config/menu/level1/mod_item",true,"config","",$data);
   }
 

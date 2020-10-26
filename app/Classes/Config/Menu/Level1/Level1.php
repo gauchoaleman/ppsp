@@ -11,6 +11,14 @@ class Level1 extends Menu
     return DB::table('menu_level1_items')->select('*')->orderBy('position', 'asc')->get();
   }
 
+  public function get_menu_items_with_level2_presence()
+  {
+    return DB::table('menu_level2_items')
+    ->join('menu_level1_items', 'menu_level1_items.id', '=', 'menu_level2_items.menu_level1_item_id')
+    ->orderBy('menu_level1_items.position', 'asc')
+    ->select('menu_level1_items.position as position')->distinct()->get();
+  }
+
   public function one_position_down($from_position,$to_position="")
   {
     if( !$to_position )

@@ -4,7 +4,7 @@ $menu_level1_items = DB::table('menu_level1_items')->orderBy('position', 'asc')-
 <div class="container">
   <br>
   <a href="/config/menu/level1/add_item">Agregar item</a><br>
-  <div class="card" style="width: 50rem;">
+  <div class="card" style="width: 70rem;">
     <div class="card-header">
       Listado items menú nivel 1
     </div>
