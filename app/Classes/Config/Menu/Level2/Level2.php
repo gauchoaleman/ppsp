@@ -31,7 +31,7 @@ class Level2 extends Menu
 
   public function get_position_from_id($id)
   {
-    $item = DB::table('menu_level2_items')->where('id','=', $id)->first();
+    $item = $this->get_item_data($id);
     return $item->position;
   }
 
@@ -41,7 +41,7 @@ class Level2 extends Menu
     return $item;
   }
 
-  public function get_menu_level1_item_id($id)
+  public function get_menu_level1_item_id_from_id($id)
   {
     $item = $this->get_item_data($id);
     return $item->menu_level1_item_id;

@@ -1,6 +1,6 @@
 <div class="container">
   <br>
-  <div class="card" style="width: 50rem;">
+  <div class="card" style="width: 70rem;">
     <div class="card-header">
       Agregar item en nivel 1
     </div>
@@ -35,11 +35,23 @@
           </div>
 
           <label class="col-md-4 col-form-label text-md-right">
-            {{ __('Posición:') }}
+            {{ __('Posición en nivel 1:') }}
           </label>
           <div class="col-md-6">
-            @include('config.menu.level1.mod_item.form.level1_position_selector')
-            @error('position')
+            @include('config.menu.level2.mod_item.form.level1_position_selector')
+            @error('menu_level1_item_id')
+              <div class="alert alert-danger">
+                {{ $message }}
+              </div>
+            @enderror
+          </div>
+
+          <label class="col-md-4 col-form-label text-md-right">
+            {{ __('Posición en nivel 2:') }}
+          </label>
+          <div class="col-md-6">
+            @include('config.menu.level2.mod_item.form.level2_position_selector')
+            @error('new_menu_level2_item_id')
               <div class="alert alert-danger">
                 {{ $message }}
               </div>

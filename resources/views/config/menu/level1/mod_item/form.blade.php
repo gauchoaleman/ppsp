@@ -2,7 +2,7 @@
   <br>
   <div class="card" style="width: 50rem;">
     <div class="card-header">
-      Agregar item en nivel 1
+      Modificar item en nivel 1
     </div>
     <div class="card-body">
       <form method="POST">

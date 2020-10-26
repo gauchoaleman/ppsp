@@ -24,12 +24,13 @@ $level1_items = $level1->get_menu_items();
     </tr>
   </thead>
   <tbody>
-    @foreach($level1_items as $level_item)
+    @foreach($level1_items as $level1_item)
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="position" name="position" value="{{$level1_item->position}}"
-              @if( $level1_item->position == $position ) checked @endif
+            <input type="radio" id="menu_level1_item_id" name="menu_level1_item_id" value="{{$level1_item->id}}"
+            @if( $level1_item->id == $menu_level1_item_id ) checked @endif
+            onchange="this.form.submit();"
             >
           </div>
         </td>

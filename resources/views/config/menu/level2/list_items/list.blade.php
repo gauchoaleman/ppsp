@@ -12,7 +12,7 @@ $menu_level2_items = DB::table('menu_level2_items')
                      ->orderBy('menu_level1_items.position', 'asc')->orderBy('menu_level2_items.position', 'asc')
                      ->where($where)
                      ->select('menu_level1_items.menu_text as level1_menu_text','menu_level2_items.menu_text as level2_menu_text',
-                     'menu_level2_items.id as level2_id','menu_level2_items.created_at as created_at','menu_level1_items.position as level1_position',
+                     'menu_level2_items.id as level2_id','menu_level1_items.id as level1_id','menu_level2_items.created_at as created_at','menu_level1_items.position as level1_position',
                      'menu_level2_items.position as level2_position')->get();
 ?>
 <div class="container">
@@ -91,7 +91,7 @@ $menu_level2_items = DB::table('menu_level2_items')
                 {{$date->format('d/m/Y')}}
               </td>
               <td align="center">
-                <a class='card-link' href="/config/menu/level2/mod_item/{{$menu_level2_item->level2_id}}"><img src='/img/edit.png'></a>
+                <a class='card-link' href="/config/menu/level2/mod_item/{{$menu_level2_item->level2_id}}/"><img src='/img/edit.png'></a>
               </td>
               <td align="center">
                 <a class='card-link' onclick="confirm_del_level2_item({{$menu_level2_item->level2_id}})" href="#"><img src='/img/delete.png'></a>
