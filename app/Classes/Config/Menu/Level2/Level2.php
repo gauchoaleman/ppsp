@@ -40,5 +40,11 @@ class Level2 extends Menu
     $item = DB::table('menu_level2_items')->where('id', $id)->first();
     return $item;
   }
+
+  public function get_menu_level1_item_id($id)
+  {
+    $item = $this->get_item_data($id);
+    return $item->menu_level1_item_id;
+  }
 }
 ?>
