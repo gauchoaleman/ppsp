@@ -2,6 +2,7 @@
 use App\Classes\Config\Menu\Level2\Level2;
 $level2 = new Level2;
 $level2_items = $level2->get_menu_items($menu_level1_item_id);
+print_r($_POST);      //Flag
 ?>
 <table class="table table-striped">
   <thead>
@@ -50,8 +51,8 @@ $level2_items = $level2->get_menu_items($menu_level1_item_id);
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="new_menu_level2_item_id" name="new_menu_level2_item_id" value="{{$level2_item->id}}"
-            @if( $level2_item->id == $new_menu_level2_item_id) checked @endif
+            <input type="radio" id="menu_level2_item_id" name="menu_level2_item_id" value="{{$level2_item->id}}"
+              @if( $level2_item->id == $menu_level2_item_id) checked @endif
             >
           </div>
         </td>

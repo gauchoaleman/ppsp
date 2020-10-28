@@ -2,7 +2,7 @@
   <br>
   <div class="card" style="width: 70rem;">
     <div class="card-header">
-      Agregar item en nivel 1
+      Modificar item en nivel 2
     </div>
     <div class="card-body">
       <form method="POST">
@@ -51,7 +51,7 @@
           </label>
           <div class="col-md-6">
             @include('config.menu.level2.mod_item.form.level2_position_selector')
-            @error('new_menu_level2_item_id')
+            @error('menu_level2_item_id')
               <div class="alert alert-danger">
                 {{ $message }}
               </div>
