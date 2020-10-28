@@ -11,7 +11,9 @@ class ModItem extends Controller
 {
   private function form_complete()
   {
-    if( isset($_POST["menu_text"]) && isset($_POST["menu_level1_item_id"]) && isset($_POST["new_menu_level2_item_id"]) )
+    //print_r($_POST);      //Flag
+    //Have to check if button was pressed or if form.submit waas made
+    if( isset($_POST["menu_text"]) && isset($_POST["menu_level1_item_id"]) && isset($_POST["new_menu_level2_item_id"]) && isset($_POST["button_pressed"]) )
       return TRUE;
     else
       return FALSE;
@@ -42,6 +44,9 @@ class ModItem extends Controller
       $new_position = $level2->get_position_from_id($new_menu_level2_item_id);
       $old_menu_level1_item_id = $level2->get_menu_level1_item_id_from_id($id);
       $new_menu_level1_item_id = $menu_level1_item_id;
+
+      print("oldpos: $old_position / newpos: $new_position / oldmenulevel1itemid: $old_menu_level1_item_id / newmenulevel1itemid: $new_menu_level1_item_id<br>");
+
       if( $old_menu_level1_item_id == $new_menu_level1_item_id ){
         if( $old_position<$new_position )
           $level2->one_position_down($old_menu_level1_item_id,$old_position+1,$new_position);
@@ -54,7 +59,7 @@ class ModItem extends Controller
       }
 
       $update_array["menu_level1_item_id"] = $new_menu_level1_item_id;
-      $update_array["position"] = $level2->get_position_from_id($new_menu_level2_item_id);
+      $update_array["position"] = $new_position;
       $update_array["menu_text"] = $menu_text;
       $update_array["text"] = $text;
       DB::table('menu_level2_items')->where('id', $id)->update($update_array);

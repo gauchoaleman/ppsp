@@ -59,7 +59,7 @@
           </div>
 
           <div class="col-md-6">
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary" name="button_pressed" value="1">
               {{ __('Entrar') }}
             </button>
           </div>

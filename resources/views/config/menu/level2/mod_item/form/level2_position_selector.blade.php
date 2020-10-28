@@ -50,7 +50,7 @@ $level2_items = $level2->get_menu_items($menu_level1_item_id);
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="position" name="new_menu_level2_item_id" value="{{$level2_item->id}}"
+            <input type="radio" id="new_menu_level2_item_id" name="new_menu_level2_item_id" value="{{$level2_item->id}}"
             @if( $level2_item->id == $new_menu_level2_item_id) checked @endif
             >
           </div>
