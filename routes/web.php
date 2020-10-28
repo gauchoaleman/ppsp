@@ -26,3 +26,7 @@ Route::any('/config/menu/level2/add_item', 'App\Http\Controllers\Config\Menu\Lev
 Route::any('/config/menu/level2/list_items', 'App\Http\Controllers\Config\Menu\Level2\ListItems');
 Route::any('/config/menu/level2/del_item/{id}', 'App\Http\Controllers\Config\Menu\Level2\DelItem');
 Route::any('/config/menu/level2/mod_item/{id}', 'App\Http\Controllers\Config\Menu\Level2\ModItem');
+Route::any('/config/menu/level3/add_item', 'App\Http\Controllers\Config\Menu\Level3\AddItem');
+Route::any('/config/menu/level3/list_items', 'App\Http\Controllers\Config\Menu\Level3\ListItems');
+Route::any('/config/menu/level3/del_item/{id}', 'App\Http\Controllers\Config\Menu\Level3\DelItem');
+?>

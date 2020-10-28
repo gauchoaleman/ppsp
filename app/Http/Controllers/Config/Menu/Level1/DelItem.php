@@ -18,6 +18,7 @@ class DelItem extends Controller
   {
     $level1 = new Level1;
     $position = $level1->get_position_from_id($id);
+    DB::table('menu_level3_items')->where('menu_level1_item_id', '=', $id)->delete();
     DB::table('menu_level2_items')->where('menu_level1_item_id', '=', $id)->delete();
     DB::table('menu_level1_items')->where('id', '=', $id)->delete();
     $level1->one_position_down($position);

@@ -20,7 +20,7 @@ $menu_level2_items = DB::table('menu_level2_items')
   <a href="/config/menu/level2/add_item">Agregar item</a><br>
   <div class="card" style="width: 70rem;">
     <div class="card-header">
-      Listado items menú nivel 1
+      Listado items menú nivel 2
     </div>
     <div class="card-body">
       <table class="table table-striped">

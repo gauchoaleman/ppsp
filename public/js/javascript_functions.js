@@ -10,6 +10,12 @@ function confirm_del_menu_level2_item(id) {
   }
 }
 
+function confirm_del_menu_level3_item(id) {
+  if (confirm("¿Está seguro que quiere borrar el item?")) {
+    window.open("/config/menu/level3/del_item/"+id,"_self");
+  }
+}
+
 
 function go_back() {
   window.history.back();
