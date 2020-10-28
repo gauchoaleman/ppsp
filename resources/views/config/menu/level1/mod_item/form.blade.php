@@ -38,7 +38,7 @@
             {{ __('Posición:') }}
           </label>
           <div class="col-md-6">
-            @include('config.menu.level1.mod_item.form.position_selector')
+            @include('config.menu.level1.mod_item.form.level1_position_selector')
             @error('position')
               <div class="alert alert-danger">
                 {{ $message }}

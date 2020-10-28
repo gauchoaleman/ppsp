@@ -25,7 +25,7 @@ $menu_level2_items = DB::table('menu_level2_items')
     <div class="card-body">
       <table class="table table-striped">
         <thead>
-        <form method="GET" target="/config/menu/level2/list_items">
+        <form method="GET" action="/config/menu/level2/list_items">
           <tr>
             <th scope="col" align="center">
               Texto en menú nivel 1
@@ -36,13 +36,13 @@ $menu_level2_items = DB::table('menu_level2_items')
                 <select id="menu_level1_item_position" name="menu_level1_item_postion">
                   <option value=""></option>
                   <?php $level1 = new Level1; ?>
-                  @foreach($level1->get_menu_items_with_level2_presence() as $level1_item)
-                    <option value="{{$level1_item->position}}"
-                      @if($menu_level1_item_position == $level1_item->position )
+                  @foreach($level1->get_menu_items_with_level2_presence() as $menu_level1_item_with_level2_presence)
+                    <option value="{{$menu_level1_item_with_level2_presence->position}}"
+                      @if($menu_level1_item_position == $menu_level1_item_with_level2_presence->position )
                         selected
                         @endif
                     >
-                      {{$level1_item->position}}
+                      {{$menu_level1_item_with_level2_presence->position}}
                     </option>
                   @endforeach
                 </select>
@@ -94,7 +94,7 @@ $menu_level2_items = DB::table('menu_level2_items')
                 <a class='card-link' href="/config/menu/level2/mod_item/{{$menu_level2_item->menu_level2_item_id}}/"><img src='/img/edit.png'></a>
               </td>
               <td align="center">
-                <a class='card-link' onclick="confirm_del_level2_item({{$menu_level2_item->menu_level2_item_id}})" href="#"><img src='/img/delete.png'></a>
+                <a class='card-link' onclick="confirm_del_menu_level2_item({{$menu_level2_item->menu_level2_item_id}})" href="#"><img src='/img/delete.png'></a>
               </td>
             </tr>
           @endforeach

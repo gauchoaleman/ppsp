@@ -46,7 +46,7 @@ $menu_level1_items = DB::table('menu_level1_items')->orderBy('position', 'asc')-
                 <a class='card-link' href="/config/menu/level1/mod_item/{{$menu_level1_item->id}}"><img src='/img/edit.png'></a>
               </td>
               <td align="center">
-                <a class='card-link' onclick="confirm_del_level1_item({{$menu_level1_item->id}})" href="#"><img src='/img/delete.png'></a>
+                <a class='card-link' onclick="confirm_del_menu_level1_item({{$menu_level1_item->id}})" href="#"><img src='/img/delete.png'></a>
               </td>
             </tr>
           @endforeach

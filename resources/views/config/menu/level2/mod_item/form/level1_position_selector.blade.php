@@ -1,7 +1,7 @@
 <?php
 use App\Classes\Config\Menu\Level1\Level1;
 $level1 = new Level1;
-$level1_items = $level1->get_menu_items();
+$menu_level1_items = $level1->get_menu_items();
 ?>
 <table class="table table-striped">
   <thead>
@@ -24,24 +24,24 @@ $level1_items = $level1->get_menu_items();
     </tr>
   </thead>
   <tbody>
-    @foreach($level1_items as $level1_item)
+    @foreach($menu_level1_items as $menu_level1_item)
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="menu_level1_item_id" name="menu_level1_item_id" value="{{$level1_item->id}}"
-            @if( $level1_item->id == $menu_level1_item_id ) checked @endif
+            <input type="radio" id="menu_level1_item_id" name="menu_level1_item_id" value="{{$menu_level1_item->id}}"
+            @if( $menu_level1_item->id == $menu_level1_item_id ) checked @endif
             onchange="this.form.submit();"
             >
           </div>
         </td>
         <td>
           <div align="center">
-            {{$level1_item->position}}
+            {{$menu_level1_item->position}}
           </div>
         </td>
         <td>
           <div align="center">
-            {{$level1_item->menu_text}}
+            {{$menu_level1_item->menu_text}}
           </div>
         </td>
       </tr>

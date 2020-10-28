@@ -1,7 +1,7 @@
 <?php
 use App\Classes\Config\Menu\Level2\Level2;
 $level2 = new Level2;
-$level2_items = $level2->get_menu_items($menu_level1_item_id);
+$menu_level2_items = $level2->get_menu_items($menu_level1_item_id);
 ?>
 <table class="table table-striped">
   <thead>
@@ -24,7 +24,7 @@ $level2_items = $level2->get_menu_items($menu_level1_item_id);
     </tr>
   </thead>
   <tbody>
-    @if( !sizeof($level2_items) )
+    @if( !sizeof($menu_level2_items) )
       <tr>
         <td>
           <div align="center">
@@ -43,40 +43,40 @@ $level2_items = $level2->get_menu_items($menu_level1_item_id);
         </td>
       </tr>
     @endif
-    @foreach($level2_items as $level2_item)
+    @foreach($menu_level2_items as $menu_level2_item)
       @if ($loop->last)
-        <?php $last_level2_item = $level2_item; ?>
+        <?php $last_menu_level2_item = $menu_level2_item; ?>
       @endif
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="position" name="position" value="{{$level2_item->position}}"
-            @if( $level2_item->position == $position) checked @endif
+            <input type="radio" id="position" name="position" value="{{$menu_level2_item->position}}"
+            @if( $menu_level2_item->position == $position) checked @endif
             >
           </div>
         </td>
         <td>
           <div align="center">
-            {{$level2_item->position}}
+            {{$menu_level2_item->position}}
           </div>
         </td>
         <td>
           <div align="center">
-            {{$level2_item->menu_text}}
+            {{$menu_level2_item->menu_text}}
           </div>
         </td>
       </tr>
     @endforeach
-    @if( sizeof($level2_items) )
+    @if( sizeof($menu_level2_items) )
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="position" name="position" value="{{$last_level2_item->position+1}}">
+            <input type="radio" id="position" name="position" value="{{$last_menu_level2_item->position+1}}">
           </div>
         </td>
         <td>
           <div align="center">
-            {{$last_level2_item->position+1}}
+            {{$last_menu_level2_item->position+1}}
           </div>
         </td>
         <td>
