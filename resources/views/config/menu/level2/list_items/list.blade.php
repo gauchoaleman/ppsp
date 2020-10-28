@@ -27,10 +27,10 @@ $menu_level2_items = DB::table('menu_level2_items')
         <thead>
         <form method="GET" action="/config/menu/level2/list_items">
           <tr>
-            <th scope="col" align="center">
+            <th scope="col" class="text-center">
               Texto en menú nivel 1
             </th>
-            <th scope="col" align="center">
+            <th scope="col" class="text-center">
               Posición en menú nivel 1<br>
               <div align="center">
                 <select id="menu_level1_item_position" name="menu_level1_item_postion">
@@ -46,26 +46,25 @@ $menu_level2_items = DB::table('menu_level2_items')
                     </option>
                   @endforeach
                 </select>
-              </div>
-            </th>
-            <th scope="col" align="center">
-              Texto en menú
-            </th>
-            <th scope="col" align="center">
-              Posición en menú
-            </th>
-            <th scope="col" align="center">
-              Fecha agregado<br>
-              <div align="center">
                 <button type="submit" style="font-size:15px;height:30px;" class="btn btn-primary">
                   {{ __('Entrar') }}
                 </button>
               </div>
+
             </th>
-            <th scope="col" align="center">
+            <th scope="col" class="text-center">
+              Texto en menú
+            </th>
+            <th scope="col" class="text-center">
+              Posición en menú
+            </th>
+            <th scope="col" class="text-center">
+              Fecha agregado<br>
+            </th>
+            <th scope="col" class="text-center">
               Modificar
             </th>
-            <th scope="col" align="center">
+            <th scope="col" class="text-center">
               Borrar
             </th>
           </tr>

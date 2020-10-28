@@ -2,7 +2,7 @@
 use App\Classes\Config\Menu\Level2\Level2;
 $level2 = new Level2;
 $menu_level2_items = $level2->get_menu_items($menu_level1_item_id);
-print_r($_POST);      //Flag
+//print_r($_POST);      //Flag
 ?>
 <table class="table table-striped">
   <thead>

@@ -12,19 +12,19 @@ $menu_level1_items = DB::table('menu_level1_items')->orderBy('position', 'asc')-
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col" align="center">
+            <th scope="col" class="text-center">
               Fecha agregado
             </th>
-            <th scope="col" align="center">
+            <th scope="col" class="text-center">
               Texto en menú
             </th>
-            <th scope="col" align="center">
+            <th scope="col" class="text-center">
               Posición
             </th>
-            <th scope="col" align="center">
+            <th scope="col" class="text-center">
               Modificar
             </th>
-            <th scope="col" align="center">
+            <th scope="col" class="text-center">
               Borrar
             </th>
           </tr>
@@ -32,14 +32,14 @@ $menu_level1_items = DB::table('menu_level1_items')->orderBy('position', 'asc')-
         <tbody>
           @foreach($menu_level1_items as $menu_level1_item)
             <tr>
-              <td>
+              <td class="text-center">
                 <?php $date = new DateTime($menu_level1_item->created_at); ?>
                 {{$date->format('d/m/Y')}}
               </td>
-              <td>
+              <td class="text-center">
                 {{$menu_level1_item->menu_text}}
               </td>
-              <td>
+              <td class="text-center">
                 {{$menu_level1_item->position}}
               </td>
               <td align="center">
