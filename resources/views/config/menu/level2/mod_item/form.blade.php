@@ -51,7 +51,7 @@
           </label>
           <div class="col-md-6">
             @include('config.menu.level2.mod_item.form.level2_position_selector')
-            @error('menu_level2_item_id')
+            @error('position')
               <div class="alert alert-danger">
                 {{ $message }}
               </div>

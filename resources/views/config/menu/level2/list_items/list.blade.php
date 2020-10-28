@@ -25,7 +25,7 @@ $menu_level2_items = DB::table('menu_level2_items')
     <div class="card-body">
       <table class="table table-striped">
         <thead>
-        <form method="GET">
+        <form method="GET" target="/config/menu/level2/list_items">
           <tr>
             <th scope="col" align="center">
               Texto en menú nivel 1
@@ -33,7 +33,7 @@ $menu_level2_items = DB::table('menu_level2_items')
             <th scope="col" align="center">
               Posición en menú nivel 1<br>
               <div align="center">
-                <select id="menu_level1_item_position" name="level1_postion">
+                <select id="menu_level1_item_position" name="menu_level1_item_postion">
                   <option value=""></option>
                   <?php $level1 = new Level1; ?>
                   @foreach($level1->get_menu_items_with_level2_presence() as $level1_item)

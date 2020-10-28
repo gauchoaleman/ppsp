@@ -51,8 +51,8 @@ print_r($_POST);      //Flag
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="menu_level2_item_id" name="menu_level2_item_id" value="{{$level2_item->id}}"
-              @if( $level2_item->id == $menu_level2_item_id) checked @endif
+            <input type="radio" id="position" name="position" value="{{$level2_item->position}}"
+              @if( $level2_item->position == $position) checked @endif
             >
           </div>
         </td>
@@ -68,5 +68,24 @@ print_r($_POST);      //Flag
         </td>
       </tr>
     @endforeach
+    @if( $old_menu_level1_item_id != $new_menu_level1_item_id )
+      <tr>
+        <td>
+          <div align="center">
+            <input type="radio" id="position" name="position" value="{{$last_level2_item->position+1}}">
+          </div>
+        </td>
+        <td>
+          <div align="center">
+            {{$last_level2_item->position+1}}
+          </div>
+        </td>
+        <td>
+          <div align="center">
+            -
+          </div>
+        </td>
+      </tr>
+    @endif
   </tbody>
 </table>

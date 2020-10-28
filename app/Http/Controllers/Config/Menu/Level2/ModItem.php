@@ -13,7 +13,7 @@ class ModItem extends Controller
   {
     //print_r($_POST);      //Flag
     //Have to check if button was pressed or if form.submit waas made
-    if( isset($_POST["menu_text"]) && isset($_POST["menu_level1_item_id"]) && isset($_POST["menu_level2_item_id"]) && isset($_POST["button_pressed"]) )
+    if( isset($_POST["menu_text"]) && isset($_POST["menu_level1_item_id"]) && isset($_POST["position"]) && isset($_POST["button_pressed"]) )
       return TRUE;
     else
       return FALSE;
@@ -41,7 +41,7 @@ class ModItem extends Controller
       $level2 = new Level2;
 
       $old_position = $level2->get_position_from_id($id);
-      $new_position = $level2->get_position_from_id($menu_level2_item_id);
+      $new_position = $position;
       $old_menu_level1_item_id = $level2->get_menu_level1_item_id_from_id($id);
       $new_menu_level1_item_id = $menu_level1_item_id;
 
@@ -67,16 +67,16 @@ class ModItem extends Controller
       return $this->show_page("config/menu/level2/list_items",true,"config","Item modificado.");
     }
     $level2 = new Level2;
-    $data["old_menu_level1_item_id"] = $level2->get_menu_level1_item_id_from_id($id);
     if( $_POST ){
       $data = $_POST;
-      if( !isset($data["menu_level2_item_id"]) )
-        $data["menu_level2_item_id"] = "";
+      if( !isset($data["position"]) )
+        $data["position"] = "";
+      $data["old_menu_level1_item_id"] = $level2->get_menu_level1_item_id_from_id($id);
       $data["new_menu_level1_item_id"] = $data["menu_level1_item_id"];
     }
     else{
       $data = (array) $level2->get_item_data($id);
-      $data["menu_level2_item_id"] = $data["id"];
+      $data["old_menu_level1_item_id"] = $level2->get_menu_level1_item_id_from_id($id);
       $data["new_menu_level1_item_id"] = $data["old_menu_level1_item_id"];
     }
 
