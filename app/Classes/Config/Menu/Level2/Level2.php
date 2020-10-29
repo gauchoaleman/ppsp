@@ -59,8 +59,6 @@ class Level2 extends Menu
   {
     $in_level1and2 = DB::table('menu_level2_items')->
                      where('menu_level1_item_id','=',$menu_level1_item_id)->where('id','=',$menu_level2_item_id)->get();
-    echo DB::table('menu_level2_items')->
-            where('menu_level1_item_id','=',$menu_level1_item_id)->where('id','=',$menu_level2_item_id)->ToSql();
     return sizeof($in_level1and2);
   }
 }

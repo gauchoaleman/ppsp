@@ -1,8 +1,15 @@
 <?php
+use App\Classes\Config\Menu\Level2\Level2;
+
 $menu_text = get_form_value("menu_text");
 $text = get_form_value("text");
 $menu_level1_item_id = get_form_value("menu_level1_item_id");
 $menu_level2_item_id = get_form_value("menu_level2_item_id");
+
+$level2 = new Level2;
+if( !$level2->not_in_level1($menu_level2_item_id,$menu_level1_item_id) )
+  $menu_level2_item_id = "";
+
 $position = get_form_value("position");
 ?>
 <div class="container">
