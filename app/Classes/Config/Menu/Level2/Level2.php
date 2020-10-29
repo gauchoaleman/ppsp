@@ -8,6 +8,8 @@ class Level2 extends Menu
 {
   public function get_menu_items($menu_level1_item_id)
   {
+    //echo DB::table('menu_level2_items')->select('*')->where('menu_level1_item_id','=',$menu_level1_item_id)->orderBy('position', 'asc')->ToSql();   //Flag
+    //echo "menu_level1_item_id: $menu_level1_item_id";       //Flag
     return DB::table('menu_level2_items')->select('*')->where('menu_level1_item_id','=',$menu_level1_item_id)->orderBy('position', 'asc')->get();
   }
 
