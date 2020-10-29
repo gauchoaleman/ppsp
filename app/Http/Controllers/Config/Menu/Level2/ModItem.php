@@ -45,8 +45,6 @@ class ModItem extends Controller
       $old_menu_level1_item_id = $level2->get_menu_level1_item_id_from_id($id);
       $new_menu_level1_item_id = $menu_level1_item_id;
 
-      print("oldpos: $old_position / newpos: $new_position / oldmenulevel1itemid: $old_menu_level1_item_id / newmenulevel1itemid: $new_menu_level1_item_id<br>");
-
       if( $old_menu_level1_item_id == $new_menu_level1_item_id ){
         if( $old_position<$new_position )
           $level2->one_position_down($old_menu_level1_item_id,$old_position+1,$new_position);

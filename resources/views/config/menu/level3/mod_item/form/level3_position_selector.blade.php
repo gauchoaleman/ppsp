@@ -1,8 +1,7 @@
 <?php
-use App\Classes\Config\Menu\Level2\Level2;
-$level2 = new Level2;
-$menu_level2_items = $level2->get_menu_items($menu_level1_item_id);
-//print_r($_POST);      //Flag
+use App\Classes\Config\Menu\Level3\Level3;
+$level3 = new Level3;
+$menu_level3_items = $level3->get_menu_items($menu_level2_item_id);
 ?>
 <table class="table table-striped">
   <thead>
@@ -25,7 +24,7 @@ $menu_level2_items = $level2->get_menu_items($menu_level1_item_id);
     </tr>
   </thead>
   <tbody>
-    @if( !sizeof($menu_level2_items) )
+    @if( !sizeof($menu_level3_items) )
       <tr>
         <td>
           <div align="center">
@@ -44,40 +43,40 @@ $menu_level2_items = $level2->get_menu_items($menu_level1_item_id);
         </td>
       </tr>
     @endif
-    @foreach($menu_level2_items as $menu_level2_item)
+    @foreach($menu_level3_items as $menu_level3_item)
       @if ($loop->last)
-        <?php $last_menu_level2_item = $menu_level2_item; ?>
+        <?php $last_menu_level3_item = $menu_level3_item; ?>
       @endif
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="position" name="position" value="{{$menu_level2_item->position}}"
-              @if( $menu_level2_item->position == $position) checked @endif
+            <input type="radio" id="position" name="position" value="{{$menu_level3_item->position}}"
+            @if( $menu_level3_item->position == $position) checked @endif
             >
           </div>
         </td>
         <td>
           <div align="center">
-            {{$menu_level2_item->position}}
+            {{$menu_level3_item->position}}
           </div>
         </td>
         <td>
           <div align="center">
-            {{$menu_level2_item->menu_text}}
+            {{$menu_level3_item->menu_text}}
           </div>
         </td>
       </tr>
     @endforeach
-    @if( $old_menu_level1_item_id != $new_menu_level1_item_id && sizeof($menu_level2_items) )
+    @if( $old_menu_level2_item_id != $new_menu_level2_item_id && sizeof($menu_level3_items))
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="position" name="position" value="{{$last_menu_level2_item->position+1}}">
+            <input type="radio" id="position" name="position" value="{{$last_menu_level3_item->position+1}}">
           </div>
         </td>
         <td>
           <div align="center">
-            {{$last_menu_level2_item->position+1}}
+            {{$last_menu_level3_item->position+1}}
           </div>
         </td>
         <td>

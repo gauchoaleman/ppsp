@@ -45,7 +45,7 @@ $position = get_form_value("position");
             {{ __('Posición en nivel 1:') }}
           </label>
           <div class="col-md-6">
-            @include('config.menu.level2.add_item.form.level1_position_selector')
+            @include('config.menu.level3.add_item.form.level1_position_selector')
             @error('menu_level1_item_id')
               <div class="alert alert-danger">
                 {{ $message }}
@@ -73,7 +73,7 @@ $position = get_form_value("position");
             </label>
             <div class="col-md-6">
               @include('config.menu.level3.add_item.form.level3_position_selector')
-              @error('level3_position')
+              @error('position')
                 <div class="alert alert-danger">
                   {{ $message }}
                 </div>

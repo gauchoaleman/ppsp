@@ -54,5 +54,14 @@ class Level2 extends Menu
     $item = $this->get_item_data($id);
     return $item->menu_level1_item_id;
   }
+
+  public function not_in_level1($menu_level2_item_id,$menu_level1_item_id)
+  {
+    $in_level1and2 = DB::table('menu_level2_items')->
+                     where('menu_level1_item_id','=',$menu_level1_item_id)->where('id','=',$menu_level2_item_id)->get();
+    echo DB::table('menu_level2_items')->
+            where('menu_level1_item_id','=',$menu_level1_item_id)->where('id','=',$menu_level2_item_id)->ToSql();
+    return sizeof($in_level1and2);
+  }
 }
 ?>

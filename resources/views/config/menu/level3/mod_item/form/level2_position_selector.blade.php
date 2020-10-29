@@ -2,7 +2,7 @@
 use App\Classes\Config\Menu\Level2\Level2;
 $level2 = new Level2;
 $menu_level2_items = $level2->get_menu_items($menu_level1_item_id);
-//print_r($_POST);      //Flag
+//$menu_level2_item_id = get_form_value("menu_level2_item_id");
 ?>
 <table class="table table-striped">
   <thead>
@@ -25,34 +25,13 @@ $menu_level2_items = $level2->get_menu_items($menu_level1_item_id);
     </tr>
   </thead>
   <tbody>
-    @if( !sizeof($menu_level2_items) )
-      <tr>
-        <td>
-          <div align="center">
-            <input type="radio" id="position" name="position" value="1">
-          </div>
-        </td>
-        <td>
-          <div align="center">
-            1
-          </div>
-        </td>
-        <td>
-          <div align="center">
-            -
-          </div>
-        </td>
-      </tr>
-    @endif
     @foreach($menu_level2_items as $menu_level2_item)
-      @if ($loop->last)
-        <?php $last_menu_level2_item = $menu_level2_item; ?>
-      @endif
       <tr>
         <td>
           <div align="center">
-            <input type="radio" id="position" name="position" value="{{$menu_level2_item->position}}"
-              @if( $menu_level2_item->position == $position) checked @endif
+            <input type="radio" id="menu_level2_item_id" name="menu_level2_item_id" value="{{$menu_level2_item->id}}"
+            @if( $menu_level2_item->id == $menu_level2_item_id ) checked @endif
+            onchange="this.form.submit();"
             >
           </div>
         </td>
@@ -68,24 +47,5 @@ $menu_level2_items = $level2->get_menu_items($menu_level1_item_id);
         </td>
       </tr>
     @endforeach
-    @if( $old_menu_level1_item_id != $new_menu_level1_item_id )
-      <tr>
-        <td>
-          <div align="center">
-            <input type="radio" id="position" name="position" value="{{$last_menu_level2_item->position+1}}">
-          </div>
-        </td>
-        <td>
-          <div align="center">
-            {{$last_menu_level2_item->position+1}}
-          </div>
-        </td>
-        <td>
-          <div align="center">
-            -
-          </div>
-        </td>
-      </tr>
-    @endif
   </tbody>
 </table>
