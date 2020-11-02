@@ -6,7 +6,7 @@ $menu_level3_items = $level3->get_menu_items($menu_level2_item_id);
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">
+      <th scope="col" >
         <div align="center">
           Elegir
         </div>

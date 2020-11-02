@@ -9,8 +9,25 @@ use Illuminate\Support\Facades\Validator;
 
 class AddItem extends Controller
 {
+  private function changed_menu_level1_item_id($menu_level1_item_id)
+  {
+    //print("_SESSION: ");    //Flag
+    //print_r($_SESSION);     //Flag
+    if( !isset($_SESSION["add_level2_form_menu_level1_item_id"])){
+      $_SESSION["add_level2_form_menu_level1_item_id"] = $menu_level1_item_id;
+      return TRUE;
+    }
+    else{
+      $the_same = $_SESSION["add_level2_form_menu_level1_item_id"] == $menu_level1_item_id;
+      $_SESSION["add_level2_form_menu_level1_item_id"] = $menu_level1_item_id;
+      return !$the_same;
+    }
+  }
+
   private function form_complete()
   {
+    if( isset($_POST["menu_level1_item_id"]) && $this->changed_menu_level1_item_id($_POST["menu_level1_item_id"]) )
+      return FALSE;
     if( isset($_POST["menu_text"]) && isset($_POST["menu_level1_item_id"]) && isset($_POST["position"]) )
       return TRUE;
     else
