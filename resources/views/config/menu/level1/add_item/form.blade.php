@@ -28,9 +28,7 @@ $text = get_form_value("text");
             {{ __('Texto:') }}
           </label>
           <div class="col-md-6">
-            <textarea id="text" name="text" rows="4" cols="50">
-              {{$text}}
-            </textarea>
+            <textarea id="text" name="text" rows="4" cols="50">{{$text}}</textarea>
             @error('text')
               <div class="alert alert-danger">
                 {{ $message }}
