@@ -1,6 +1,6 @@
 <div class="container">
   <br>
-  <div class="card" style="width: 50rem;">
+  <div class="card" style="width: 70rem;">
     <div class="card-header">
       Modificar item en nivel 1
     </div>

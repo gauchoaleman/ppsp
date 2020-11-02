@@ -84,15 +84,15 @@ class ModItem extends Controller
       $level2 = new Level2;
       if( !$level2->not_in_level1($data["menu_level2_item_id"],$data["menu_level1_item_id"]) )
         $data["menu_level2_item_id"] = "";
-      print("Data from Post");    //Flag
-      print_r($data);       //Flag
+      //print("Data from Post");    //Flag
+      //print_r($data);       //Flag
     }
     else{
       $data = (array) $level3->get_item_data($id);
       $data["old_menu_level2_item_id"] = $level3->get_menu_level2_item_id_from_id($id);
       $data["new_menu_level2_item_id"] = $data["old_menu_level2_item_id"];
-      print("Data from db");    //Flag
-      print_r($data);       //Flag
+      //print("Data from db");    //Flag
+      //print_r($data);       //Flag
     }
 
     return $this->show_page("config/menu/level3/mod_item",true,"config","",$data);
