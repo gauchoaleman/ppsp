@@ -99,6 +99,9 @@ $menu_level2_items = DB::table('menu_level2_items')
           @endforeach
         </tbody>
       </table>
+      @if( !sizeof($menu_level2_items))
+        No hay items registrados
+      @endif
     </div>
   </div>
 </div>

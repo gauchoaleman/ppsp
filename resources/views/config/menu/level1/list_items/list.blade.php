@@ -52,6 +52,9 @@ $menu_level1_items = DB::table('menu_level1_items')->orderBy('position', 'asc')-
           @endforeach
         </tbody>
       </table>
+      @if( !sizeof($menu_level1_items))
+        No hay items registrados
+      @endif
     </div>
   </div>
 </div>
