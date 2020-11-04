@@ -13,13 +13,13 @@ class AddItem extends Controller
   {
     //print("_SESSION: ");    //Flag
     //print_r($_SESSION);     //Flag
-    if( !isset($_SESSION["add_level2_form_menu_level1_item_id"])){
-      $_SESSION["add_level2_form_menu_level1_item_id"] = $menu_level1_item_id;
+    if( !isset($_SESSION["add_level3_form_menu_level1_item_id"])){
+      $_SESSION["add_level3_form_menu_level1_item_id"] = $menu_level1_item_id;
       return TRUE;
     }
     else{
-      $the_same = $_SESSION["add_level2_form_menu_level1_item_id"] == $menu_level1_item_id;
-      $_SESSION["add_level2_form_menu_level1_item_id"] = $menu_level1_item_id;
+      $the_same = $_SESSION["add_level3_form_menu_level1_item_id"] == $menu_level1_item_id;
+      $_SESSION["add_level3_form_menu_level1_item_id"] = $menu_level1_item_id;
       return !$the_same;
     }
   }
@@ -28,13 +28,13 @@ class AddItem extends Controller
   {
     //print("_SESSION: ");    //Flag
     //print_r($_SESSION);     //Flag
-    if( !isset($_SESSION["add_level2_form_menu_level2_item_id"])){
-      $_SESSION["add_level2_form_menu_level2_item_id"] = $menu_level2_item_id;
+    if( !isset($_SESSION["add_level3_form_menu_level2_item_id"])){
+      $_SESSION["add_level3_form_menu_level2_item_id"] = $menu_level2_item_id;
       return TRUE;
     }
     else{
-      $the_same = $_SESSION["add_level2_form_menu_level2_item_id"] == $menu_level2_item_id;
-      $_SESSION["add_level2_form_menu_level2_item_id"] = $menu_level2_item_id;
+      $the_same = $_SESSION["add_level3_form_menu_level2_item_id"] == $menu_level2_item_id;
+      $_SESSION["add_level3_form_menu_level2_item_id"] = $menu_level2_item_id;
       return !$the_same;
     }
   }
