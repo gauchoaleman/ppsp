@@ -1,0 +1,143 @@
+.tengo-ideas {
+  background: #b1d035;
+  border-radius: 10px;
+  width: 45%;
+  height: 45%;
+  font-size: 20px;  
+  margin-top: -2em;
+  margin-bottom: -2em;
+  margin-left: 1em;
+  margin-right: -2.1em;
+  padding-top: .5em;
+  padding-bottom: -3em;
+  padding-left: -2em;
+  padding-right: -2em;
+}
+
+
+.ideas{
+  width: 55px;
+  height: 55px;
+  margin-top: -.1em;
+  margin-bottom: 4em;
+  margin-right: 1em;
+  margin-left: -3.5em;
+  padding-top: -3em;
+  padding-bottom: -3em;
+  padding-right: -5em;
+  padding-left: -3em;
+  font-size: 20px;
+}
+.preocupa-alguien{
+  background: #b1d035;
+  border-radius: 10px;
+  width: 45%;
+  height: 45%;
+  font-size: 20px;
+  margin-top: 2em;
+  margin-bottom: .5em;
+  margin-left: 2em;
+  margin-right: -1em;
+  padding-top: 3em;
+  padding-bottom: 1.3em;
+  padding-left: -2em;
+  padding-right: -3em;
+}
+
+
+.preocupa{
+  width: 55px;
+  height: 55px;
+  margin-top: -8em;
+  margin-bottom: -2em;
+  margin-right: -3.5em;
+  margin-left: -.1em;
+  padding-top: -2em;
+  padding-bottom: -2em;
+  padding-right: -1em;
+  font-size: 20px; 
+}
+
+.profesional-familia-interesado{
+  background: #b1d035;
+  width: 45%;
+  height: 45%;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: .1em;
+  margin-bottom: -8em;
+  margin-left: .9em;
+  margin-right: 1em;
+  padding-top: 1.2em;
+  padding-bottom: .1em;
+  padding-left: -4em;
+  padding-right: -4em;
+}
+
+
+.hospital {
+  width: 55px;
+  height: 55px;
+  margin-top: -.1em;
+  margin-bottom: -1em;
+  margin-right: 2em;
+  margin-left: -1em;
+  padding-top: -5rem;
+  padding-bottom: 1.9em;
+  padding-left: -4rem;
+  padding-right: -2em;
+  font-size: .1px;
+}
+
+.informacion {
+  background: #b1d035;
+  border-radius: 10px;
+  width: 45%;
+  height: 45%;
+  font-size: 20px; 
+  margin-top: -10em;
+  margin-bottom: -1em;
+  margin-left: -1em;
+  margin-right: -2em;
+  padding-top: 1.3em;
+  padding-bottom: 1.6em;
+  padding-left: -2em;
+  padding-right: .5em;
+}
+
+
+.info{
+  width: 55px;
+  height: 55px;
+  margin-top: -.5em;
+  margin-bottom: .4em;
+  margin-left: .1em;
+  margin-right: -1em;
+  padding-top: -3em;
+  padding-bottom: -5em;
+  padding-left: -3em;
+  padding-right: -2em;
+  font-size: 20px;
+}
+
+.emergencia {
+  background: #b1d035;
+  border-radius: 10px;
+  font-size: 20px; 
+  width: 45%;
+  height: 45%;
+  font-size: 25px;
+  margin-top: 3.5em;
+  margin-bottom: 1em;
+  margin-left: 4.2em;
+  margin-right: -4em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.modal-menu{
+  color: #b1d035;
+  border-bottom: 1px solid #b1d035;
+}
