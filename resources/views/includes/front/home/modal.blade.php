@@ -19,7 +19,7 @@ $menu_level1_item_menu_text = $menu_level1_item_data->menu_text;
         <?php $level2 = new Level2; ?>
         @foreach($level2->get_menu_items($menu_level1_item_id) as $menu_level2_item)
           @if( $menu_level2_item->text )
-            <button class="dropdown-item modal-menu" type="button"><a href='{{$menu_level2_item->id}}'>{{$menu_level2_item->menu_text}}</a></button>
+            <button class="dropdown-item modal-menu" type="button"><a href='showtext/level2/{{$menu_level2_item->id}}'>{{$menu_level2_item->menu_text}}</a></button>
           @else
             <button class="dropdown-item modal-menu" type="button">{{$menu_level2_item->menu_text}}</button>
           @endif
