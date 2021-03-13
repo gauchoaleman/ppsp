@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\ShowRoot');
 Route::get('/home', 'App\Http\Controllers\ShowPage');
-//Route::any('/show_text/level2/{id}', 'App\Http\Controllers\ShowText\Level2');
+Route::any('/show_text/level2/{id}', 'App\Http\Controllers\ShowText\Level2');
+Route::any('/show_text/level3/{id}', 'App\Http\Controllers\ShowText\Level3');
 Route::any('/config/login', 'App\Http\Controllers\Config\Login');
 Route::any('/config/logout', 'App\Http\Controllers\Config\Logout');
 Route::get('/config/home', 'App\Http\Controllers\ShowPage');
