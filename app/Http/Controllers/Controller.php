@@ -20,20 +20,22 @@ class Controller extends BaseController
   use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
   public function show_page($uri,$with_menubars,$site_section,$message = "",$data=array()) {
+    //PPSPFlag
+    //echo "site_section".$site_section;
     $ret = "";
     if( $site_section == "front" )
       $title = "Prevención suicidio";
     else
       $title = "Configuración Prevención suicidio";
-    $ret .= view('includes/head',['title' => $title]);
+    $ret .= view("/includes/$site_section/head",['title' => $title]);
     if( $with_menubars )
-      $ret .= view("includes/$site_section/top_bar");
+      $ret .= view("/includes/$site_section/top_bar");
     if( $message )
       $ret .= $message."<br>";
     $ret .= view($uri,$data);
     if( $with_menubars )
-      $ret .= view("includes/$site_section/bottom_bar");
-    $ret .= view('includes/bottom');
+      $ret .= view("/includes/$site_section/bottom_bar");
+    $ret .= view("/includes/$site_section/bottom");
     return $ret;
   }
 

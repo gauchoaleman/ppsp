@@ -14,7 +14,7 @@ class ShowRoot extends Controller
    */
   public function __invoke(Request $request)
   {
-    get_form_value("hola");
+    //get_form_value("hola");
     return $this->show_page("home",true,"front");
   }
 }
