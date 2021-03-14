@@ -1,6 +1,7 @@
 <?php
 use App\Classes\Config\Menu\Level1\Level1;
 ?>
+<div id="top_bar_mobile">
 <!-- barra de navegación -->
 <nav class="navbar navbar-light bg-i  nverse navbar-expand-sm" style="background-color: #b1d035;">
   <!-- icono de hamburguesa -->
@@ -21,3 +22,13 @@ use App\Classes\Config\Menu\Level1\Level1;
     </div>
   </div>
 </nav>
+</div>
+@if($_SERVER["REQUEST_URI"] == "/home" || $_SERVER["REQUEST_URI"] == "/" )
+  <script>
+  if (navigator.userAgent.indexOf('Mobile') !== -1) {
+      document.getElementById('top_bar_mobile').style.display = "none";
+  } else {
+      document.getElementById('top_bar_mobile').style.display = "";
+  }
+  </script>
+@endif

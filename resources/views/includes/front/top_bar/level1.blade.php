@@ -7,7 +7,6 @@ use App\Classes\Config\Menu\Level3\Level3;
     aria-haspopup="true" aria-expanded="false" style="background-color: #546a8f;">
     {{$menu_level1_item->menu_text}}
   </button>
-  <!-- Submenu 1 -->
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="background-color: #546a8f;">
 
     <?php $level2 = new Level2; ?>

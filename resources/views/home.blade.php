@@ -1,3 +1,4 @@
+<div id="home_mobile" style="display:none">
     <!-- COMIENZO EN DISPOSITIVOS MOVILES -->
   <nav>
     <!-- Menu tengo ideas -->
@@ -24,5 +25,13 @@
 
     <a href='tel:154301742'><button class="emergencia" type="button" aria-haspopup="true" aria-expanded="false"> 911
       </button></a>
-
   </nav>
+</div>
+
+<script>
+if (navigator.userAgent.indexOf('Mobile') !== -1) {
+    document.getElementById('home_mobile').style.display = "";
+} else {
+    document.getElementById('home_mobile').style.display = "none";
+}
+</script>
