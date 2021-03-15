@@ -17,7 +17,7 @@ use App\Classes\Config\Menu\Level1\Level1;
       $level1 = new Level1;
     ?>
       @foreach($level1->get_menu_items() as $menu_level1_item)
-        @include('includes.front.top_bar.level1',['menu_level1_item' =>$menu_level1_item])
+        @include('includes.front.top_bar.menu_section',['menu_level1_item' =>$menu_level1_item])
       @endforeach
     </div>
   </div>

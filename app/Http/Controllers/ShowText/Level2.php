@@ -23,7 +23,7 @@ class Level2 extends Controller
             ->first();
     $data = (array)$menu_level2_item;
     //return $this->show_page("home",true,"front");
-    if( !$data )
+    if( !$data || !$data["menu_level2_item_text"] )
       return $this->show_page("show_text/not_valid_id",true,"front");
     else
       return $this->show_page("show_text/level2",true,"front","",$data);

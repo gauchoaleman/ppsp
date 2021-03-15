@@ -23,7 +23,7 @@ class Level3 extends Controller
             ->where('menu_level3_items.id',$id)
             ->first();
     $data = (array)$menu_level3_item;
-    if( !$data )
+    if( !$data || !$data["menu_level3_item_text"])
       return $this->show_page("show_text/not_valid_id",true,"front");
     else
       return $this->show_page("show_text/level3",true,"front","",$data);
