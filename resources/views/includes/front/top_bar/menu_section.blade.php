@@ -9,7 +9,9 @@ use App\Classes\Config\Menu\Level3\Level3;
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="background-color: #546a8f;">
 
-    <?php $level2 = new Level2; ?>
+    <?php $level2 = new Level2;
+    //print_r($level2->get_menu_items($menu_level1_item->id));
+    ?>
     @foreach($level2->get_menu_items($menu_level1_item->id) as $menu_level2_item)
       @if( $menu_level2_item->text )
         <button class="dropdown-item modal-menu" type="button"><a href='/show_text/level2/{{$menu_level2_item->id}}'>{{$menu_level2_item->menu_text}}</a></button>

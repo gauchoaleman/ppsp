@@ -5,6 +5,8 @@ use App\Classes\Config\Menu\Level3\Level3;
 
 $level1 = new Level1;
 $menu_level1_item_data = $level1->get_item_data($menu_level1_item_id);
+if( isset($menu_level1_item1_data) )
+{
 $menu_level1_item_menu_text = $menu_level1_item_data->menu_text;
 ?>
 <div class="modal" tabindex="-1" id="modal{{$menu_level1_item_id}}">
@@ -43,3 +45,6 @@ $menu_level1_item_menu_text = $menu_level1_item_data->menu_text;
     </div>
   </div>
 </div>
+<?php
+}
+ ?>
