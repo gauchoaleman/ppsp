@@ -6,7 +6,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Usuario:') }}</label>
 
                             <div class="col-md-6">
-                                <input type="text" id="user" class="form-control" name="user" required autofocus>
+                                <input type="text" id="name" class="form-control" name="name" required autofocus>
                             </div>
                         </div>
 

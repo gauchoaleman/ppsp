@@ -19,6 +19,8 @@ Route::any('/show_text/level2/{id}', 'App\Http\Controllers\ShowText\Level2');
 Route::any('/show_text/level3/{id}', 'App\Http\Controllers\ShowText\Level3');
 Route::any('/config/login', 'App\Http\Controllers\Config\Login');
 Route::any('/config/logout', 'App\Http\Controllers\Config\Logout');
+Route::any('/config/users', 'App\Http\Controllers\Config\Users');
+//Route::any('/config/list_users', 'App\Http\Controllers\Config\ListUsers');
 Route::get('/config/home', 'App\Http\Controllers\ShowPage');
 Route::any('/config/menu/level1/add_item', 'App\Http\Controllers\Config\Menu\Level1\AddItem');
 Route::any('/config/menu/level1/list_items', 'App\Http\Controllers\Config\Menu\Level1\ListItems');

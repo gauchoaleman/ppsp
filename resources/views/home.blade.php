@@ -1,4 +1,4 @@
-<div id="home_mobile" style="display:non">
+<div id="home_mobile" style="display:none">
     <!-- COMIENZO EN DISPOSITIVOS MOVILES -->
   <nav>
     <!-- Menu tengo ideas -->

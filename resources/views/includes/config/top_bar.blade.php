@@ -1,47 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="/config/home">
-          Config Home
-        </a>
-      </li>
-      &nbsp;&nbsp;
-      <li class="active">
-        <a href="/config/logout">
-          Logout
-        </a>
-      </li>
-      &nbsp;&nbsp;
-      <li class="dropdown">
-        <a href="/config/menu/level1/list_items">
-          <span class="nav-label">
-            Nivel 1
-          </span>
-        </a>
-      </li>
-      &nbsp;&nbsp;
-      <li class="dropdown">
-        <a href="/config/menu/level2/list_items">
-          <span class="nav-label">
-            Nivel 2
-          </span>
-        </a>
-      </li>
-      &nbsp;&nbsp;
-      <li class="dropdown">
-        <a href="/config/menu/level3/list_items">
-          <span class="nav-label">
-            Nivel 3
-          </span>
-        </a>
-      </li>
-      &nbsp;&nbsp;
-    </ul>
+<header class="header">
+  <div class="top-bar">
+    <div class="icon-menu" id="icon-menu">
+      <div class="icon-menu__bar"></div>
+    </div>
   </div>
-</nav>
 
-<div style="min-height:785px">
+  <nav>
+    <ul class="menu" id="main-menu">
+      <ul class="menu__item"><a href="/config/home" class="menu__link">Config Home</a>
+      </ul>
+
+      <ul class="menu__item"><a href="/config/logout" class="menu__link">Logout</a>
+      </ul>
+
+      <ul class="menu__item"><a href="/config/menu/level1/list_items" class="menu__link">Nivel 1</a>
+      </ul>
+
+      <ul class="menu__item"><a href="/config/menu/level2/list_items" class="menu__link">Nivel 2</a>
+      </ul>
+      <ul class="menu__item"><a href="/config/menu/level3/list_items" class="menu__link">Nivel 3</a>
+      </ul>
+      <ul class="menu__item"><a href="/config/users" class="menu__link">Usuarios</a>
+      </ul>
+    </ul>
+  </nav>
+</header>
+<div>
